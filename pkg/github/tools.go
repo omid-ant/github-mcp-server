@@ -134,6 +134,12 @@ var (
 		Icon:        "tag",
 	}
 
+	ToolsetMetadataArithmetic = inventory.ToolsetMetadata{
+		ID:          "arithmetic",
+		Description: "Basic arithmetic calculation tools",
+		Icon:        "number",
+	}
+
 	ToolsetMetadataCopilot = inventory.ToolsetMetadata{
 		ID:          "copilot",
 		Description: "Copilot related tools",
@@ -274,6 +280,9 @@ func AllTools(t translations.TranslationHelperFunc) []inventory.ServerTool {
 		GetLabelForLabelsToolset(t),
 		ListLabels(t),
 		LabelWrite(t),
+
+		// Arithmetic tools
+		Calculate(t),
 	}
 }
 
