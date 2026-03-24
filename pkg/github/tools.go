@@ -141,6 +141,12 @@ var (
 		Icon:        "copilot",
 	}
 
+	ToolsetMetadataCalculator = inventory.ToolsetMetadata{
+		ID:          "calculator",
+		Description: "Arithmetic calculation tools",
+		Icon:        "number",
+	}
+
 	// Remote-only toolsets - these are only available in the remote MCP server
 	// but are documented here for consistency and to enable automated documentation.
 	ToolsetMetadataCopilotSpaces = inventory.ToolsetMetadata{
@@ -274,6 +280,9 @@ func AllTools(t translations.TranslationHelperFunc) []inventory.ServerTool {
 		GetLabelForLabelsToolset(t),
 		ListLabels(t),
 		LabelWrite(t),
+
+		// Calculator tools
+		Calculate(t),
 	}
 }
 

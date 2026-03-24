@@ -1,0 +1,36 @@
+{
+  "annotations": {
+    "readOnlyHint": true,
+    "title": "Calculate"
+  },
+  "description": "Perform basic arithmetic operations: add, subtract, multiply, or divide two numbers.",
+  "inputSchema": {
+    "properties": {
+      "a": {
+        "description": "The first operand.",
+        "type": "number"
+      },
+      "b": {
+        "description": "The second operand.",
+        "type": "number"
+      },
+      "operation": {
+        "description": "The arithmetic operation to perform. One of: add, subtract, multiply, divide.",
+        "enum": [
+          "add",
+          "subtract",
+          "multiply",
+          "divide"
+        ],
+        "type": "string"
+      }
+    },
+    "required": [
+      "operation",
+      "a",
+      "b"
+    ],
+    "type": "object"
+  },
+  "name": "calculate"
+}
